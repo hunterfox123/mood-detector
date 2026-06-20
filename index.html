@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Mood Detector</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- WELCOME -->
+<section id="screen1" class="screen">
+
+<h1>🤖 AI Project Cycle for a Mood Detector</h1>
+
+<p>
+An AI Project Cycle is the step-by-step process used to build an AI system.
+For a Mood Detector, it helps the system understand a person’s emotion
+(happy, sad, angry, neutral, etc.) from text, voice, or facial expressions.
+</p>
+
+<h2>1. Problem Scoping 🎯</h2>
+<p>
+First, we define the problem.<br><br>
+<b>Problem:</b> Detect the mood of a person.<br>
+<b>Goal:</b> Build a system that can identify emotions like happy, sad, angry, or neutral.<br>
+<b>Use:</b> Chatbots, mental health apps, customer feedback analysis.<br><br>
+👉 Example: “We want to detect if a user message is happy or sad.”
+</p>
+
+<h2>2. Data Acquisition 📊</h2>
+<p>
+We collect data for training the AI.<br><br>
+✔ Text data: sentences like “I am very happy today 😊”<br>
+✔ Label data: Happy → “I am excited!”, Sad → “I feel lonely.”<br><br>
+👉 The AI learns from examples of emotions.
+</p>
+
+<h2>3. Data Exploration & Preparation 🧹</h2>
+<p>
+We clean and prepare the data.<br><br>
+✔ Remove unwanted symbols or errors<br>
+✔ Convert text into usable form<br>
+✔ Label data properly (happy, sad, angry)<br><br>
+👉 Example: “I am sooo happy!!!” → “I am happy”
+</p>
+
+<h2>4. Modelling 🧠</h2>
+<p>
+We choose and train a model.<br><br>
+✔ Machine learning or AI models<br>
+✔ Example: Decision Tree, Naive Bayes, Neural Networks<br><br>
+👉 AI learns patterns like “happy”, “great”, “awesome” = positive mood
+</p>
+
+<h2>5. Evaluation 📈</h2>
+<p>
+We test the model.<br><br>
+✔ Give new sentences<br>
+✔ Check prediction accuracy<br><br>
+👉 Example: “I am very sad today” → Sad ✔️
+</p>
+
+<h2>6. Deployment 🚀</h2>
+<p>
+We make the model usable.<br><br>
+✔ Put it in a website or app<br>
+✔ Users get instant mood results<br><br>
+👉 Example: “Your mood is Happy 😊”
+</p>
+
+<br>
+
+<button onclick="nextScreen('screen2')">
+Start Project Cycle ➜
+</button>
+
+</section>
+
+<h1>🤖 AI Mood Detector</h1>
+<h2>By Ansh Kapoor</h2>
+
+<p>AI detects mood using questions and scoring system.</p>
+
+<button onclick="nextScreen('screen2')">Start Project</button>
+<button onclick="showLeaderboard()">🏆 View Leaderboard</button>
+
+</section>
+
+<!-- AI CYCLE -->
+<section id="screen2" class="screen hidden">
+<h2>Problem Scoping</h2>
+<p>Understanding emotion detection problem.</p>
+<button onclick="nextScreen('screen3')">Next</button>
+</section>
+
+<section id="screen3" class="screen hidden">
+<h2>Data Acquisition</h2>
+<p>Collecting responses using questions.</p>
+<button onclick="nextScreen('screen4')">Next</button>
+</section>
+
+<section id="screen4" class="screen hidden">
+<h2>Data Exploration</h2>
+<p>Analyzing mood patterns.</p>
+<button onclick="nextScreen('screen5')">Next</button>
+</section>
+
+<section id="screen5" class="screen hidden">
+<h2>Modelling</h2>
+<p>Assigning scores to answers.</p>
+<button onclick="nextScreen('screen6')">Next</button>
+</section>
+
+<section id="screen6" class="screen hidden">
+<h2>Evaluation</h2>
+<p>Checking final prediction.</p>
+<button onclick="nextScreen('screen7')">Continue</button>
+</section>
+
+<!-- NAME -->
+<section id="screen7" class="screen hidden">
+
+<h2>Enter Your Name</h2>
+
+<input type="text" id="username" placeholder="Your Name">
+
+<button onclick="startQuiz()">Start Test</button>
+
+</section>
+
+<!-- QUIZ -->
+<section id="quizPage" class="screen hidden">
+
+<h2 id="questionNumber"></h2>
+<h3 id="questionText"></h3>
+
+<div id="optionsContainer"></div>
+
+<button onclick="nextQuestion()">Next</button>
+
+</section>
+
+<!-- RESULT -->
+<section id="resultPage" class="screen hidden">
+
+<h2 id="moodResult"></h2>
+<h3 id="scoreResult"></h3>
+<p id="suggestionResult"></p>
+
+<button onclick="saveResult()">Save Result</button>
+
+</section>
+
+<!-- LEADERBOARD -->
+<section id="leaderboardPage" class="screen hidden">
+
+<h1>🏆 Leaderboard</h1>
+
+<table id="leaderboardTable"></table>
+
+<button onclick="nextScreen('screen1')">Back</button>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
